@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Build Your Audience Funnel - Complete Guide</title>
+    <title>YouTube Hook Analyzer - Discover Viral Patterns</title>
     <style>
         * {
             margin: 0;
@@ -12,486 +12,843 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
+            color: #ffffff;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            min-height: 100vh;
         }
 
-        .guide-container {
-            max-width: 800px;
+        .container {
+            max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 0 20px;
         }
 
-        .cover-page {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: white;
-            padding: 80px 60px;
-            text-align: center;
-            min-height: 100vh;
+        /* Header */
+        .header {
+            padding: 20px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .nav {
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .cover-title {
-            font-size: 3.5em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        .cover-subtitle {
-            font-size: 1.8em;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-
-        .cover-author {
-            font-size: 1.3em;
-            margin-top: 60px;
-            opacity: 0.8;
-        }
-
-        .page {
-            padding: 60px;
-            min-height: 100vh;
-            page-break-after: always;
-        }
-
-        .page h1 {
-            color: #1e3a8a;
-            font-size: 2.5em;
-            margin-bottom: 30px;
-            border-bottom: 3px solid #3b82f6;
-            padding-bottom: 15px;
-        }
-
-        .page h2 {
-            color: #1e40af;
-            font-size: 1.8em;
-            margin: 40px 0 20px 0;
-        }
-
-        .page h3 {
-            color: #2563eb;
-            font-size: 1.4em;
-            margin: 30px 0 15px 0;
-        }
-
-        .page p {
-            margin-bottom: 20px;
-            font-size: 1.1em;
-            text-align: justify;
-        }
-
-        .callout-box {
-            background: #eff6ff;
-            border-left: 5px solid #3b82f6;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 5px;
-        }
-
-        .quote-box {
-            background: #1e3a8a;
-            color: white;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 10px;
-            text-align: center;
-            font-style: italic;
-            font-size: 1.2em;
-        }
-
-        .three-columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 30px;
-            margin: 30px 0;
-        }
-
-        .column-box {
-            background: #f1f5f9;
-            padding: 20px;
-            border-radius: 8px;
-            border-top: 4px solid #3b82f6;
-        }
-
-        .stats-highlight {
-            background: #fef3c7;
-            border: 2px solid #f59e0b;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-
-        .funnel-visual {
-            display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            margin: 30px 0;
         }
 
-        .funnel-stage {
-            background: #3b82f6;
-            color: white;
-            padding: 15px 30px;
-            margin: 5px 0;
-            border-radius: 25px;
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffff00;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: #ffff00;
+            color: #000000;
+        }
+
+        .btn-primary:hover {
+            background: #e6e600;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        .btn-pro {
+            background: linear-gradient(45deg, #ffff00, #ffd700);
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .btn-pro:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 255, 0, 0.3);
+        }
+
+        /* Hero Section */
+        .hero {
             text-align: center;
+            padding: 80px 0;
+        }
+
+        .hero h1 {
+            font-size: 48px;
             font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #ffffff, #ffff00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .funnel-stage:nth-child(1) { width: 300px; }
-        .funnel-stage:nth-child(2) { width: 200px; }
-        .funnel-stage:nth-child(3) { width: 100px; }
-
-        .toc-list {
-            list-style: none;
-            font-size: 1.2em;
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            color: #cccccc;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .toc-list li {
-            padding: 15px 0;
-            border-bottom: 1px solid #e5e7eb;
+        .cta-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 60px;
         }
 
-        .toc-list li:before {
-            content: "→ ";
-            color: #3b82f6;
-            font-weight: bold;
+        /* Main App */
+        .app-container {
+            background: #1a1a1a;
+            border-radius: 16px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 1px solid #333;
         }
 
-        ul.bullet-list {
-            margin: 20px 0 20px 30px;
+        .app-container.hidden {
+            display: none;
         }
 
-        ul.bullet-list li {
-            margin-bottom: 10px;
-            font-size: 1.1em;
+        .input-group {
+            margin-bottom: 30px;
         }
 
-        .ai-tip {
-            background: linear-gradient(45deg, #10b981, #059669);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 25px 0;
-        }
-
-        .ai-tip strong {
+        .input-group label {
             display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #ffff00;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background: #000000;
+            color: #ffffff;
+            font-size: 16px;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: #ffff00;
+        }
+
+        .analyze-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(45deg, #ffff00, #ffd700);
+            color: #000000;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .analyze-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 255, 0, 0.3);
+        }
+
+        .analyze-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Results */
+        .results {
+            margin-top: 40px;
+            padding: 30px;
+            background: #0a0a0a;
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+
+        .results.hidden {
+            display: none;
+        }
+
+        .hook-pattern {
+            background: #1a1a1a;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            border-left: 4px solid #ffff00;
+        }
+
+        .hook-pattern h3 {
+            color: #ffff00;
             margin-bottom: 10px;
-            font-size: 1.1em;
         }
 
-        @media print {
-            .guide-container {
-                box-shadow: none;
-            }
-            .page {
-                padding: 40px;
-            }
+        .hook-pattern p {
+            color: #cccccc;
+            margin-bottom: 8px;
         }
 
+        .hook-score {
+            display: inline-block;
+            background: #ffff00;
+            color: #000000;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Credit System */
+        .credits-display {
+            background: #1a1a1a;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #333;
+        }
+
+        .credits-info {
+            color: #ffff00;
+            font-weight: 600;
+        }
+
+        .upgrade-prompt {
+            background: linear-gradient(45deg, #ffff00, #ffd700);
+            color: #000000;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .upgrade-prompt.hidden {
+            display: none;
+        }
+
+        /* Auth Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+        }
+
+        .modal.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #1a1a1a;
+            padding: 40px;
+            border-radius: 16px;
+            max-width: 400px;
+            width: 90%;
+            border: 1px solid #333;
+        }
+
+        .modal-content h2 {
+            color: #ffff00;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background: #000000;
+            color: #ffffff;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #ffff00;
+        }
+
+        .google-btn {
+            width: 100%;
+            padding: 12px;
+            background: #ffffff;
+            color: #000000;
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: #ffffff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #ffff00;
+        }
+
+        .spinner {
+            border: 3px solid #333;
+            border-top: 3px solid #ffff00;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .cover-page {
-                padding: 40px 30px;
+            .hero h1 {
+                font-size: 36px;
             }
-            .cover-title {
-                font-size: 2.5em;
+            
+            .hero p {
+                font-size: 18px;
             }
-            .page {
-                padding: 30px;
+            
+            .cta-section {
+                flex-direction: column;
+                align-items: center;
             }
-            .three-columns {
-                grid-template-columns: 1fr;
+            
+            .app-container {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="guide-container">
-        <!-- Cover Page -->
-        <div class="cover-page">
-            <h1 class="cover-title">Build Your Audience Funnel</h1>
-            <p class="cover-subtitle">The Complete Guide to Turning Strangers into Subscribers</p>
-            <div class="cover-author">by Dr. Erin Jacques</div>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">🎯 Hook Analyzer</div>
+                <div class="auth-buttons">
+                    <div id="authButtons">
+                        <button class="btn btn-secondary" onclick="openModal('signin')">Sign In</button>
+                        <button class="btn btn-primary" onclick="openModal('signup')">Sign Up</button>
+                    </div>
+                    <div id="userInfo" style="display: none;">
+                        <span id="userEmail" class="credits-info"></span>
+                        <button class="btn btn-secondary" onclick="signOut()">Sign Out</button>
+                    </div>
+                </div>
+            </nav>
         </div>
+    </header>
 
-        <!-- Table of Contents -->
-        <div class="page">
-            <h1>Table of Contents</h1>
-            <ul class="toc-list">
-                <li>Prologue: The Knowledge You Already Have</li>
-                <li>Key #1: The Two Ways to Get Attention</li>
-                <li>Key #2: Why Funnels Matter to Making Money Online</li>
-                <li>Key #3: Why You Need to Build It Yourself</li>
-                <li>Key #4: Building Your Foundation – The Three-Page System</li>
-                <li>Your Digital Foundation</li>
-                <li>Next Steps</li>
-                <li>About the Author</li>
-            </ul>
-        </div>
-
-        <!-- Prologue -->
-        <div class="page">
-            <h1>Prologue: The Knowledge You Already Have</h1>
+    <main class="container">
+        <section class="hero">
+            <h1>Discover What Makes Videos Go Viral</h1>
+            <p>Analyze any YouTube channel to uncover the hook patterns that drive millions of views. Get data-driven insights to boost your content strategy.</p>
             
-            <div class="quote-box">
-                "You already know enough to make money online."
+            <div class="cta-section">
+                <button class="btn btn-primary btn-large" onclick="scrollToApp()">Get Started Free</button>
+                <button class="btn btn-pro" onclick="upgradeToPro()">Upgrade to Pro</button>
             </div>
+        </section>
 
-            <p>I know that sounds impossible, especially if you're reading this while sitting in a cubicle, dreading Monday mornings, or wondering how other people seem to have cracked some secret code that you weren't given access to. But here's what I need you to understand before we go any further:</p>
-
-            <div class="callout-box">
-                <strong>The system has trained you to dismiss your own expertise.</strong>
-            </div>
-
-            <p>Think about it. Right now, there are people paying good money to learn something you already know how to do. Maybe it's how to organize a chaotic schedule, how to meal prep for a family of five, how to train a rescue dog, or how to navigate office politics without losing your soul. Maybe it's something you learned in your day job that you think "everyone knows" but trust me—they don't.</p>
-
-            <p>I've been a serial entrepreneur my whole life, so I've learned this lesson more times than I care to admit. But one moment that really crystallized it for me was during my doctoral studies at Columbia University, bursting into my advisor Dr. Charles Basch's office every few days with yet another world-changing dissertation idea. He was incredibly kind and patient—honestly, I think he enjoyed my curiosity to explore every possible angle of making the world better.</p>
-
-            <p>But here's the thing: I'd still be a doctoral student right now if I hadn't finally just picked a damn thing and stuck to it long enough to get done.</p>
-
-            <div class="callout-box">
-                <strong>And that's exactly what I need you to understand about making money online: just pick a damn thing and stick to it long enough to learn how it works.</strong>
-            </div>
-
-            <p>But the moment that really changed my life happened in my car, listening to an audiobook version of Expert Secrets by Russell Brunson. Now, this might sound crazy, but I heard something in his voice—this frenzied energy, like he'd discovered a secret formula and was desperate for everyone to have it. No gatekeeping. No holding back. Just methodical, step-by-step breakdown of exactly how this whole "making money online" thing actually works.</p>
-
-            <p>And you know what hit me? We were twinning.</p>
-
-            <p>I'm a Black woman from New York, Haitian descent. He's a white man from the Midwest. We are worlds apart in every demographic imaginable. But that energy? That "this is too good to keep to myself" passion? I recognized it immediately because it's the same energy that's been driving me crazy for years.</p>
-
-            <div class="quote-box">
-                "The perfect niche isn't out there waiting for you to discover it. The perfect niche is you."
-            </div>
-        </div>
-
-        <!-- Key #1 -->
-        <div class="page">
-            <h1>Key #1: The Two Ways (And Only Two Ways) to Get Attention</h1>
-
-            <p>When I was eight years old, I had a weird obsession with infomercials.</p>
-
-            <p>While other kids were watching cartoons, I was glued to the TV at 2 AM, mesmerized by people selling everything from kitchen gadgets to get-rich-quick schemes. But here's the thing—I didn't want what they were selling. I wanted to know how they were selling it.</p>
-
-            <p>Every single infomercial followed the exact same script: the problem, the testimonials ("if I can do it, you can too!"), the lifetime guarantee, the sense of urgency. It didn't matter if they were hawking a Thighmaster or a real estate program—the persuasion formula was identical.</p>
-
-            <p>Because back then, you had two options for reaching people: pay for it, or physically go find them.</p>
-
-            <p>I remember selling Cutco knives door-to-door (lasted exactly two weeks, by the way). On an aggressive day, you might knock on 50 doors and pray that one person would let you in. When I started my after-school enrichment company, I graduated to guerrilla marketing—standing outside schools with flyers, hoping parents would take one as they picked up their kids.</p>
-
-            <p>Good luck getting 200 people to take a flyer from you in a single day.</p>
-
-            <p>But now? A mediocre social media post gets 200 views in minutes. There's no way you could physically reach 200 people door-to-door in an entire day, let alone in the time it takes to hit "publish."</p>
-
-            <div class="stats-highlight">
-                Everything changed. And yet, the fundamental truth about getting attention hasn't changed at all.
-            </div>
-
-            <div class="callout-box">
-                <strong>There are still only two ways to get people into your ecosystem:</strong><br>
-                <strong>Organic or Paid. Content or Ads. Earn the attention or buy the attention.</strong>
-            </div>
-
-            <h2>The Hook Point Reality</h2>
-
-            <p>Here's what Brendan Kane calls your "hook point" in his book of the same name—those first three seconds when people either stop scrolling or keep walking. Whether you're creating organic content or running paid ads, you've got three seconds to grab someone's attention.</p>
-
-            <div class="quote-box">
-                "Three seconds. That's shorter than it takes to read this sentence."
-            </div>
-
-            <p>In digital marketing, it sounds more like this: "I know you're into home decor. I've got this fun quiz—answer a few questions about your preferences and style, and I'll give you a list of online shops that match your vibe."</p>
-
-            <p>They say: "Great, thanks!"</p>
-
-            <p>You say: "Perfect—just drop your email and I'll send it to your inbox."</p>
-
-            <p>This is the digital equivalent of that networking conversation. You've identified their interest, offered immediate value, and asked for a small commitment in return.</p>
-
-            <div class="ai-tip">
-                <strong>AI Advantage:</strong> Use AI to research your audience's exact language patterns by feeding it comments from your ideal customers' social media activity. Then have it write your lead magnet offer using their actual words and phrases. When your copy sounds like their internal dialogue, conversion rates skyrocket.
-            </div>
-        </div>
-
-        <!-- Key #2 -->
-        <div class="page">
-            <h1>Key #2: Why Funnels Matter to Making Money Online</h1>
-
-            <p>But here's where the magic happens.</p>
-
-            <p>Out of 100 people who get that pitch, maybe 15 give you their email. And that 15% conversion only happens if you actually did your audience research and built something they genuinely want.</p>
-
-            <div class="funnel-visual">
-                <div class="funnel-stage">100 People See Your Offer</div>
-                <div class="funnel-stage">15 Give You Email</div>
-                <div class="funnel-stage">1 Becomes Customer</div>
-            </div>
-
-            <p>Out of those 15 people, maybe 5 like your free resource so much they book a sales call. Of those 5, maybe 1 person buys.</p>
-
-            <p>Now we're getting somewhere.</p>
-
-            <p>But here's the key—those other 14 people are still in your ecosystem. You can keep offering value, keep showing up, and over time, they'll start to know, like, and trust you too.</p>
-
-            <h2>The Dollar-Per-Person Rule</h2>
-
-            <div class="stats-highlight">
-                For every engaged person you have in your funnel, you're looking at roughly $1 per month in potential revenue.
-            </div>
-
-            <p>Think of your funnel as a house, and your lead magnet—that free resource you're offering—as the front door. It's what ushers people inside.</p>
-
-            <p>So why $1 per person?</p>
-
-            <p>Let's say you sell a $20 or $30 product. Maybe 1 person buys it, and 19 don't. Then over time, 2 more buy, and 15 still don't. That's how the numbers typically play out—so on average, each engaged person on your list is worth about a dollar a month.</p>
-
-            <div class="callout-box">
-                <strong>Do the math: 10,000 people in your funnel equals $10,000 per month in potential revenue.</strong>
-            </div>
-
-            <p>But here's the crucial part: this $1 per month rule only applies to engaged leads—people who opted in to your free offer and have shown real interest in what you do. You can't just buy 10,000 cold email addresses, add them to your system, and expect to make $10,000 a month. That's not how this works.</p>
-
-            <p>In the know-like-trust game, people who opt in for your lead magnet are officially in the "know" stage and maybe—just maybe—they're starting to like you. That's who the $1 per month rule applies to. Not cold lists. Not random emails. Real people with real interest who receive real value.</p>
-        </div>
-
-        <!-- Key #3 -->
-        <div class="page">
-            <h1>Key #3: Why You Need to Build It Yourself</h1>
-
-            <p>And this is where the mindset shift kicks in.</p>
-
-            <p>You might be thinking: "Okay, fine—but I'll just hire someone on Fiverr or Upwork to build the funnel for me."</p>
-
-            <p>You can do that. But I promise you—you'll never make consistent money online that way.</p>
-
-            <p>Why?</p>
-
-            <p>Because this part—the funnel—is foundational. You don't have to become a full-time digital marketer, but you do need to know a few non-negotiable digital marketing skills.</p>
-
-            <div class="callout-box">
-                It's like saying: "I'm a surgeon, but I don't know how to use a scalpel—someone else handles that part." Or "I'm a hairdresser, but I don't use scissors." Or "I'm a chef, but I don't touch the stove."
-            </div>
-
-            <p>Those are the tools of the trade.</p>
-
-            <div class="quote-box">
-                "Funnels are the tool of online business. They are the digital scalpel, the scissors, the stove."
-            </div>
-
-            <p>And the moment you decide to sell digital products online, you become whatever you were before plus someone who creates digital content.</p>
-
-            <p>So go ahead and append that to your title: "I'm a teacher who creates digital content." "I'm a fitness coach who creates digital content." "I'm a hairstylist who creates digital content."</p>
-
-            <p>Because if you're going to invite people into your world, you need a house to welcome them into. And the front door of that house is your funnel.</p>
-
-            <p>You can't fully outsource the part where people enter your business. Not unless you know the system like the back of your hand. Otherwise, you're just standing outside your own house, watching opportunity walk right past you.</p>
-        </div>
-
-        <!-- Key #4 -->
-        <div class="page">
-            <h1>Key #4: Building Your Foundation - The Three-Page System</h1>
-
-            <p>Here's what every audience-building funnel needs at minimum:</p>
-
-            <div class="three-columns">
-                <div class="column-box">
-                    <h3>Page 1: The Opt-In Page</h3>
-                    <p>This is where people enter their email to receive your free resource. One clear headline, one compelling offer, one email field, one button. That's it.</p>
+        <section class="app-container" id="appContainer">
+            <div id="creditsDisplay" class="credits-display" style="display: none;">
+                <div class="credits-info">
+                    <span id="creditsText">Credits: 3</span>
+                    <span id="planText">(Free Plan)</span>
                 </div>
-                <div class="column-box">
-                    <h3>Page 2: The Thank You Page</h3>
-                    <p>This is where people land after they opt in. It confirms their submission went through and delivers the free resource you promised.</p>
+                <button class="btn btn-pro" onclick="upgradeToPro()">Upgrade to Pro</button>
+            </div>
+
+            <div class="upgrade-prompt hidden" id="upgradePrompt">
+                <h3>🚀 Upgrade to Pro for Unlimited Analysis</h3>
+                <p>You've used all your free credits. Upgrade to Pro for unlimited channel analysis and advanced insights.</p>
+                <button class="btn btn-pro" onclick="upgradeToPro()">Upgrade Now - $29/month</button>
+            </div>
+
+            <div class="input-group">
+                <label for="channelUrl">YouTube Channel URL</label>
+                <input type="url" id="channelUrl" placeholder="https://www.youtube.com/@channelname" />
+            </div>
+
+            <button class="analyze-btn" id="analyzeBtn" onclick="analyzeChannel()">
+                🔍 Analyze Hook Patterns
+            </button>
+
+            <div class="loading hidden" id="loading">
+                <div class="spinner"></div>
+                <p>Analyzing top videos and detecting hook patterns...</p>
+            </div>
+
+            <div class="results hidden" id="results">
+                <h2 style="color: #ffff00; margin-bottom: 20px;">Hook Pattern Analysis</h2>
+                <div id="hookPatterns"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <h2 id="modalTitle">Sign In</h2>
+            
+            <button class="google-btn" onclick="signInWithGoogle()">
+                Continue with Google
+            </button>
+            
+            <div style="text-align: center; margin: 20px 0; color: #666;">or</div>
+            
+            <form id="authForm">
+                <div class="form-group">
+                    <input type="email" id="email" placeholder="Email" required />
                 </div>
-                <div class="column-box">
-                    <h3>Page 3: The Next Step Page</h3>
-                    <p>This is where you offer deeper engagement. Maybe it's a free strategy call, maybe it's a low-ticket product, maybe it's an invitation to join a group or community.</p>
+                <div class="form-group">
+                    <input type="password" id="password" placeholder="Password" required />
                 </div>
+                <button class="btn btn-primary" type="submit" style="width: 100%;">
+                    <span id="submitText">Sign In</span>
+                </button>
+            </form>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="#" onclick="toggleAuthMode()" style="color: #ffff00; text-decoration: none;">
+                    <span id="toggleText">Don't have an account? Sign up</span>
+                </a>
             </div>
-
-            <h2>Here's an example:</h2>
-
-            <p>Let's say your lead magnet was "5 Herbs for Natural Stress Relief." You've just solved one problem—they now know which herbs to use. But every time you solve one problem, you create a new one. Now they might be thinking: "This is great, but how do I know which herbs are right for my specific situation? Where do I even buy these? What dosage should I use?"</p>
-
-            <p>That new problem creates the perfect opportunity for your next step offer.</p>
-
-            <h2>The Flow That Converts</h2>
-
-            <p>When someone discovers your content—whether through organic posts or paid ads—they're essentially window shopping. Your job is to turn window shoppers into people who walk through your front door.</p>
-
-            <ul class="bullet-list">
-                <li><strong>Your lead magnet is the invitation:</strong> "Come inside, I've got something you'll want to see."</li>
-                <li><strong>Your thank you page is the welcome mat:</strong> "Thanks for coming in, here's what I promised you."</li>
-                <li><strong>Your next step page is the deeper conversation:</strong> "Now that you've seen what I can do, want to go further?"</li>
-            </ul>
-
-            <p>This isn't complicated. It's not fancy. But it works.</p>
-
-            <p>And once you understand this flow—really understand it—you can adapt it to sell anything. Courses, coaching, consulting, physical products, memberships. The structure stays the same; only the specifics change.</p>
-        </div>
-
-        <!-- Your Digital Foundation -->
-        <div class="page">
-            <h1>Your Digital Foundation</h1>
-
-            <p>This funnel becomes the foundation for everything else you build online. Want to launch a course? Send people through your funnel first, then invite your engaged leads to buy. Want to fill a webinar? Your funnel audience becomes your webinar audience. Want to test a new product idea? Ask your funnel subscribers what they want.</p>
-
-            <p>You're not just building a lead capture system. You're building a direct line to people who have already raised their hand and said they're interested in what you have to offer.</p>
-
-            <div class="callout-box">
-                <strong>And once you have that—once you have a predictable way to turn strangers into subscribers—everything else becomes possible.</strong>
-            </div>
-
-            <p>That's the power of building your audience funnel. That's why this foundation matters more than any individual tactic, any specific platform, any particular strategy.</p>
-
-            <p>Because platforms change. Tactics become outdated. Strategies evolve.</p>
-
-            <div class="quote-box">
-                "But the fundamental truth remains: people buy from people they know, like, and trust. Your funnel is how you systematically move strangers through that progression."
-            </div>
-
-            <p>Build it right, and you'll never worry about where your next customer is coming from again.</p>
-
-            <h2>Want to See This in Action?</h2>
-
-            <p>Reading about building funnels and actually building one are two completely different skills. If you want the step-by-step, over-my-shoulder implementation training that turns everything you just learned into a real, working funnel—I've created a complete course called "Build Your Funnel in 1 Hour."</p>
-
-            <p>In it, I walk you through the exact process using free tools, so you can watch me build a complete audience funnel from scratch and follow along to create your own. You'll get the actual pages, the automation setup, the copy templates, and the testing strategies—everything you need to go from theory to implementation.</p>
-
-            <p>Because here's the truth: you can understand the psychology and strategy perfectly, but until you've actually built one yourself, you don't really know how it works.</p>
-
-            <div class="stats-highlight">
-                Get the complete step-by-step course at www.erinjacques.com/build-your-funnel
-            </div>
-        </div>
-
-        <!-- About the Author -->
-        <div class="page">
-            <h1>About Dr. Erin Jacques</h1>
-
-            <p><strong>Entrepreneur, professor, and creator of the AIM Method™.</strong></p>
-
-            <p>I hold advanced degrees from Columbia University and the University of Pennsylvania, where I specialized in data science, public health, and systems innovation. I live at the intersection of data science, AI, and systems – and I help you use research-backed strategies and AI tools to turn what you know into income — even if you're starting from scratch, without a team or technical background.</p>
-
-            <div class="callout-box">
-                <strong>My Mission:</strong> To help you systematically turn your existing knowledge into a profitable online business using proven frameworks and cutting-edge AI tools.
-            </div>
-
-            <p>Whether you're a complete beginner or someone who's tried to make money online before without success, my approach focuses on building sustainable systems that work regardless of your technical background or current audience size.</p>
-
-            <p>The strategies in this guide have helped thousands of people build their first profitable funnels and create predictable income streams from their expertise.</p>
-
-            <p>Ready to get started? Visit <strong>www.erinjacques.com</strong> for more resources and training.</p>
         </div>
     </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script>
+        // Firebase Configuration - Replace with your actual config
+        const firebaseConfig = {
+            apiKey: "your-api-key",
+            authDomain: "your-project.firebaseapp.com",
+            projectId: "your-project-id",
+            storageBucket: "your-project.appspot.com",
+            messagingSenderId: "123456789",
+            appId: "your-app-id"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // Global variables
+        let currentUser = null;
+        let isSignUpMode = false;
+
+        // Auth state observer
+        auth.onAuthStateChanged((user) => {
+            if (user) {
+                currentUser = user;
+                showUserInfo(user);
+                loadUserData(user);
+            } else {
+                currentUser = null;
+                showAuthButtons();
+            }
+        });
+
+        // UI Functions
+        function showUserInfo(user) {
+            document.getElementById('authButtons').style.display = 'none';
+            document.getElementById('userInfo').style.display = 'flex';
+            document.getElementById('userEmail').textContent = user.email;
+            document.getElementById('creditsDisplay').style.display = 'flex';
+        }
+
+        function showAuthButtons() {
+            document.getElementById('authButtons').style.display = 'flex';
+            document.getElementById('userInfo').style.display = 'none';
+            document.getElementById('creditsDisplay').style.display = 'none';
+        }
+
+        function openModal(mode) {
+            isSignUpMode = mode === 'signup';
+            document.getElementById('modalTitle').textContent = isSignUpMode ? 'Sign Up' : 'Sign In';
+            document.getElementById('submitText').textContent = isSignUpMode ? 'Sign Up' : 'Sign In';
+            document.getElementById('toggleText').textContent = isSignUpMode ? 
+                'Already have an account? Sign in' : "Don't have an account? Sign up";
+            document.getElementById('authModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('authModal').classList.remove('active');
+            document.getElementById('authForm').reset();
+        }
+
+        function toggleAuthMode() {
+            isSignUpMode = !isSignUpMode;
+            openModal(isSignUpMode ? 'signup' : 'signin');
+        }
+
+        function scrollToApp() {
+            document.getElementById('appContainer').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Authentication Functions
+        document.getElementById('authForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                if (isSignUpMode) {
+                    const userCredential = await auth.createUserWithEmailAndPassword(email, password);
+                    await createUserDocument(userCredential.user);
+                } else {
+                    await auth.signInWithEmailAndPassword(email, password);
+                }
+                closeModal();
+            } catch (error) {
+                alert('Error: ' + error.message);
+            }
+        });
+
+        async function signInWithGoogle() {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            try {
+                const result = await auth.signInWithPopup(provider);
+                const user = result.user;
+                
+                // Check if user document exists, create if not
+                const userDoc = await db.collection('users').doc(user.email).get();
+                if (!userDoc.exists) {
+                    await createUserDocument(user);
+                }
+                
+                closeModal();
+            } catch (error) {
+                alert('Error: ' + error.message);
+            }
+        }
+
+        async function signOut() {
+            try {
+                await auth.signOut();
+            } catch (error) {
+                alert('Error signing out: ' + error.message);
+            }
+        }
+
+        // Firestore Functions
+        async function createUserDocument(user) {
+            try {
+                await db.collection('users').doc(user.email).set({
+                    email: user.email,
+                    plan: 'free',
+                    credits: 3,
+                    createdAt: firebase.firestore.FieldValue.serverTimestamp()
+                });
+            } catch (error) {
+                console.error('Error creating user document:', error);
+            }
+        }
+
+        async function loadUserData(user) {
+            try {
+                const userDoc = await db.collection('users').doc(user.email).get();
+                if (userDoc.exists) {
+                    const userData = userDoc.data();
+                    updateCreditsDisplay(userData.credits, userData.plan);
+                }
+            } catch (error) {
+                console.error('Error loading user data:', error);
+            }
+        }
+
+        function updateCreditsDisplay(credits, plan) {
+            document.getElementById('creditsText').textContent = 
+                plan === 'pro' ? 'Credits: Unlimited' : `Credits: ${credits}`;
+            document.getElementById('planText').textContent = 
+                plan === 'pro' ? '(Pro Plan)' : '(Free Plan)';
+        }
+
+        async function updateUserCredits(newCredits) {
+            if (!currentUser) return;
+            
+            try {
+                await db.collection('users').doc(currentUser.email).update({
+                    credits: newCredits
+                });
+                updateCreditsDisplay(newCredits, 'free');
+            } catch (error) {
+                console.error('Error updating credits:', error);
+            }
+        }
+
+        // YouTube Analysis Functions
+        async function analyzeChannel() {
+            if (!currentUser) {
+                openModal('signin');
+                return;
+            }
+
+            const channelUrl = document.getElementById('channelUrl').value;
+            if (!channelUrl) {
+                alert('Please enter a YouTube channel URL');
+                return;
+            }
+
+            // Check user credits
+            const userDoc = await db.collection('users').doc(currentUser.email).get();
+            const userData = userDoc.data();
+            
+            if (userData.plan !== 'pro' && userData.credits <= 0) {
+                document.getElementById('upgradePrompt').classList.remove('hidden');
+                return;
+            }
+
+            showLoading();
+            
+            try {
+                // Extract channel ID from URL
+                const channelId = extractChannelId(channelUrl);
+                if (!channelId) {
+                    throw new Error('Invalid YouTube channel URL');
+                }
+
+                // Fetch top videos from YouTube API
+                const videos = await fetchTopVideos(channelId);
+                
+                // Analyze hook patterns
+                const hookPatterns = analyzeHookPatterns(videos);
+                
+                // Display results
+                displayResults(hookPatterns);
+                
+                // Update credits for free users
+                if (userData.plan !== 'pro') {
+                    await updateUserCredits(userData.credits - 1);
+                }
+                
+            } catch (error) {
+                alert('Error analyzing channel: ' + error.message);
+            } finally {
+                hideLoading();
+            }
+        }
+
+        function extractChannelId(url) {
+            // Extract channel ID from various YouTube URL formats
+            const patterns = [
+                /youtube\.com\/channel\/([a-zA-Z0-9_-]+)/,
+                /youtube\.com\/c\/([a-zA-Z0-9_-]+)/,
+                /youtube\.com\/@([a-zA-Z0-9_-]+)/,
+                /youtube\.com\/user\/([a-zA-Z0-9_-]+)/
+            ];
+            
+            for (const pattern of patterns) {
+                const match = url.match(pattern);
+                if (match) return match[1];
+            }
+            return null;
+        }
+
+        async function fetchTopVideos(channelId) {
+            // This would use the YouTube API in production
+            // For demo purposes, return mock data
+            return [
+                {
+                    title: "How I Made $10,000 in 30 Days (Step by Step)",
+                    views: 1500000,
+                    thumbnail: "https://via.placeholder.com/320x180"
+                },
+                {
+                    title: "The #1 Mistake Everyone Makes (You're Probably Doing It Too)",
+                    views: 950000,
+                    thumbnail: "https://via.placeholder.com/320x180"
+                },
+                {
+                    title: "Watch This Before You Start Your Business",
+                    views: 800000,
+                    thumbnail: "https://via.placeholder.com/320x180"
+                }
+            ];
+        }
+
+        function analyzeHookPatterns(videos) {
+            const patterns = [];
+            
+            videos.forEach(video => {
+                const title = video.title;
+                const hooks = [];
+                
+                // Number patterns
+                if (/\$[\d,]+|\d+%|\d+ (days|weeks|months|years)/i.test(title)) {
+                    hooks.push({
+                        type: 'Numbers & Statistics',
+                        description: 'Uses specific numbers to create credibility and curiosity',
+                        score: 85
+                    });
+                }
+                
+                // Question patterns
+                if (/\?/.test(title)) {
+                    hooks.push({
+                        type: 'Question Hook',
+                        description: 'Poses a question to engage viewer curiosity',
+                        score: 75
+                    });
+                }
+                
+                // Urgency patterns
+                if (/(watch this|before you|stop|urgent|now)/i.test(title)) {
+                    hooks.push({
+                        type: 'Urgency & FOMO',
+                        description: 'Creates sense of urgency or fear of missing out',
+                        score: 80
+                    });
+                }
+                
+                // Mistake/Problem patterns
+                if (/(mistake|wrong|problem|error|fail)/i.test(title)) {
+                    hooks.push({
+                        type: 'Problem/Mistake',
+                        description: 'Highlights common problems or mistakes',
+                        score: 90
+                    });
+                }
+                
+                patterns.push({
+                    title: title,
+                    views: video.views,
+                    hooks: hooks
+                });
+            });
+            
+            return patterns;
+        }
+
+        function displayResults(patterns) {
+            const resultsDiv = document.getElementById('results');
+            const hookPatternsDiv = document.getElementById('hookPatterns');
+            
+            hookPatternsDiv.innerHTML = '';
+            
+            patterns.forEach(pattern => {
+                const patternDiv = document.createElement('div');
+                patternDiv.className = 'hook-pattern';
+                
+                let hooksHtml = '';
+                pattern.hooks.forEach(hook => {
+                    hooksHtml += `
+                        <div style="margin: 10px 0;">
+                            <strong style="color: #ffff00;">${hook.type}</strong>
+                            <span class="hook-score">${hook.score}% effective</span>
+                            <p>${hook.description}</p>
+                        </div>
+                    `;
+                });
+                
+                patternDiv.innerHTML = `
+                    <h3>${pattern.title}</h3>
+                    <p style="color: #888; margin-bottom: 15px;">${pattern.views.toLocaleString()} views</p>
+                    ${hooksHtml}
+                `;
+                
+                hookPatternsDiv.appendChild(patternDiv);
+            });
+            
+            resultsDiv.classList.remove('hidden');
+        }
+
+        function showLoading() {
+            document.getElementById('analyzeBtn').disabled = true;
+            document.getElementById('loading').classList.remove('hidden');
+            document.getElementById('results').classList.add('hidden');
+        }
+
+        function hideLoading() {
+            document.getElementById('analyzeBtn').disabled = false;
+            document.getElementById('loading').classList.add('hidden');
+        }
+
+        // Stripe Integration
+        async function upgradeToPro() {
+            if (!currentUser) {
+                openModal('signin');
+                return;
+            }
+
+            try {
+                const response = await fetch('/.netlify/functions/create-checkout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: currentUser.email
+                    })
+                });
+
+                const { url } = await response.json();
+                window.location.href = url;
+            } catch (error) {
+                alert('Error creating checkout session: ' + error.message);
+            }
+        }
+    </script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+{
+  "name": "youtube-hook-analyzer",
+  "version": "1.0.0",
+  "description": "YouTube Hook Analyzer - Discover what makes videos go viral",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build step required'",
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "stripe": "^14.0.0"
+  },
+  "keywords": [
+    "youtube",
+    "analytics",
+    "hooks",
+    "viral",
+    "content"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
